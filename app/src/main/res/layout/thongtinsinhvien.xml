@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvTieude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thông tinh sinh viên"
+        android:gravity="center"
+        android:padding="20dp"
+        android:textColor="#ffff3037"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:id="@+id/tvMaSV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mã sinh viên:"
+        android:textColor="#000000"
+        android:layout_below="@+id/tvTieude"/>
+    <TextView
+        android:id="@+id/txtMaSV1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1310395"
+        android:paddingLeft="10dp"
+        android:textSize="15dp"
+        android:textColor="#ff1707ff"
+        android:layout_below="@+id/tvTieude"
+        android:layout_alignLeft="@+id/txtTenSV"
+        android:layout_alignStart="@+id/txtTenSV" />
+    <TextView
+        android:id="@+id/tvTenSV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên sinh viên"
+        android:textColor="#000000"
+        android:layout_below="@+id/txtMaSV1"
+        android:paddingTop="15dp"/>
+    <EditText
+        android:id="@+id/txtTenSV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ff2c0fff"
+        android:hint="Nguyễn Trần Minh Hòa"
+        android:layout_below="@+id/tvMaSV1"
+        android:layout_toRightOf="@+id/tvTenSV"
+        android:layout_toEndOf="@+id/tvTenSV"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp" />
+    <TextView
+        android:id="@+id/tvGT1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giới tính"
+        android:textColor="#000000"
+        android:layout_below="@+id/txtTenSV"
+        android:paddingTop="15dp"/>
+    <EditText
+        android:id="@+id/txtGT1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ff2c0fff"
+        android:hint="Nam"
+        android:layout_alignBaseline="@+id/tvGT1"
+        android:layout_alignBottom="@+id/tvGT1"
+        android:layout_alignLeft="@+id/txtTenSV"
+        android:layout_alignStart="@+id/txtTenSV" />
+    <TextView
+        android:id="@+id/tvNamSinh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Năm Sinh"
+        android:textColor="#000000"
+        android:layout_below="@+id/tvGT1"
+        android:paddingTop="20dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtNamSinh"
+        android:hint="Năm Sinh"
+        android:textColor="#ff2c0fff"
+        android:layout_below="@+id/txtGT1"
+        android:layout_alignLeft="@+id/txtGT1"
+        android:layout_alignStart="@+id/txtGT1" />
+    <TextView
+        android:id="@+id/tvTenLop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên Lớp"
+        android:textColor="#000000"
+        android:layout_below="@+id/tvNamSinh"
+        android:paddingTop="20dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTenLop"
+        android:hint="Tên Lớp"
+        android:textColor="#ff2c0fff"
+        android:layout_below="@+id/txtNamSinh"
+        android:layout_alignLeft="@+id/txtNamSinh"
+        android:layout_alignStart="@+id/txtNamSinh" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quay lại"
+        android:layout_marginRight="75dp"
+        android:layout_marginEnd="43dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+    <Button
+        android:id="@+id/btnCapNhat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cập nhật"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/btnBack"
+        android:layout_toStartOf="@+id/btnBack"
+        android:layout_marginRight="12dp"
+        android:layout_marginEnd="12dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTenLop"
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout">
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnexp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="22dp"
+        android:layout_toStartOf="@+id/btnCapNhat"
+        android:text="Export" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_toStartOf="@+id/txtTenLop"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/btnBack"
+        android:id="@+id/qr"/>
+
+
+
+</RelativeLayout>

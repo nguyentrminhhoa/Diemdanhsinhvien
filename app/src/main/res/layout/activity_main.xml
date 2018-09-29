@@ -1,0 +1,137 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <EditText
+            android:id="@+id/txtMaNV"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:hint="Mã sinh viên"
+            android:textColor="@android:color/black"
+            android:textColorHint="#ff495bff" />
+
+        <EditText
+            android:id="@+id/txtTenNV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Họ tên sinh viên"
+            android:textColor="@android:color/black"
+            android:textColorHint="#ff495bff"
+            android:layout_toRightOf="@+id/txtMaNV"
+            android:layout_toEndOf="@+id/txtMaNV" />
+
+        <EditText
+            android:id="@+id/txtNamSinh"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:hint="Năm Sinh"
+            android:textColor="@android:color/black"
+            android:textColorHint="#ff495bff"
+            android:layout_below="@+id/txtMaNV"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/txtTenLop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tên Lớp"
+            android:textColor="@android:color/black"
+            android:textColorHint="#ff495bff"
+            android:layout_below="@+id/txtTenNV"
+            android:layout_toRightOf="@+id/txtMaNV"
+            android:layout_toEndOf="@+id/txtMaNV" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvGT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/btnThem"
+            android:layout_alignBottom="@+id/btnThem"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:padding="5dp"
+            android:text="Giới tính:"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+        <RadioGroup
+            android:id="@+id/rdgGT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvGT"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rdbGTnam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:paddingTop="10dp"
+                android:text="Nam" />
+
+            <RadioButton
+                android:id="@+id/rdbGTnu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:paddingTop="10dp"
+                android:text="Nữ" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnThem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/rdgGT"
+            android:text="Thêm" />
+
+        <Button
+            android:id="@+id/btnIn"
+            android:text="In Thẻ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/btnThem" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DANH SÁCH SINH VIÊN"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:background="#30ffee"
+        android:padding="10dp" />
+    <LinearLayout
+        android:id="@+id/svlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/listSV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants"></ListView>
+    </LinearLayout>
+
+</LinearLayout>
